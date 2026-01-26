@@ -6,6 +6,7 @@ A **trustworthy ARV estimator** that:
 2) Computes **ARV + confidence range (deterministic code)**
 3) Uses AI only to **explain the “why”** behind comp choice and value drivers
 4) Lets users **curate comps (Keep/Reject)** and instantly see how it changes ARV + confidence
+5) map view (optional)
 
 ## Why this exists
 ARV estimates are hard to trust because comp selection is often opaque and biased.  
