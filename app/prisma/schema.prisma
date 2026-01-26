@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Property {
+  id           String   @id @default(cuid())
+  lat          Float
+  lon          Float
+  propertyType String
+  beds         Int?
+  floorAreaSqm Float?
+
+  createdAt    DateTime @default(now())
+}
+
+model Sale {
+  id           String   @id @default(cuid())
+  lat          Float
+  lon          Float
+  soldPriceGbp Int
+  soldDate     DateTime
+  propertyType String
+  beds         Int?
+  floorAreaSqm Float?
+
+  createdAt    DateTime @default(now())
+}
