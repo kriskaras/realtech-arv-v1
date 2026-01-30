@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "install:app": "npm --prefix app install",
+    "dev": "npm --prefix app run dev",
+    "db:setup": "npm --prefix app run db:setup",
+    "db:migrate": "npm --prefix app run db:migrate",
+    "db:seed": "npm --prefix app run db:seed"
+  }
+}
