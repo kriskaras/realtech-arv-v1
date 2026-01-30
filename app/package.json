@@ -6,10 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:seed": "node -r dotenv/config prisma/seed.js",
+    "db:migrate": "prisma migrate deploy",
+    "db:setup": "npm run prisma:generate && npm run db:migrate && npm run db:seed",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.19.2",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
     "next": "16.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3"
@@ -24,5 +30,8 @@
     "prisma": "^6.19.2",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20 <23"
   }
 }
